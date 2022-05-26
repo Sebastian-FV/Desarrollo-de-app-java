@@ -34,7 +34,7 @@
 				  <option selected>Antioquia</option>
 				  <option selected>Atlántico</option>
 				  <option selected>Barranquilla D.E</option>
-				  <option selected>Santa Fe de Bogotá D.C.</option>
+				  <option selected>Bogotá D.C.</option>
 				  <option selected>Bolívar</option>
 				  <option selected>Cartagena D.E.</option>
 				  <option selected>Boyaca</option>
