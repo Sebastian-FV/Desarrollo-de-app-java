@@ -15,14 +15,15 @@
 
 	<div class="container1">
 		<form action="ServletPersonaController" method="get">
+			<br>
 			<div>
 				<label>ID : </label>
-				<input type="text" name="id">
+				<input placeholder="ID" type="text" name="id">
 			</div>
 			
 			<div>
 				<label for="browser">Tipo_Documento: </label>
-				<input list="browsers" name="tipo_documento" id="tipo_documento">
+				<input placeholder="Tipo Documento" list="browsers" name="tipo_documento" id="tipo_documento">
 				
 				<datalist id="browsers">
 				  <option value="RC">
@@ -33,31 +34,31 @@
 			</div>
 			<div>
 				<label>Numero_Documento : </label>
-				<input type="number" name="numero_documento">
+				<input placeholder="Numero Documento" type="number" name="numero_documento">
 			</div>
 			<div>
 				<label>Nombres : </label>
-				<input type="text" name="nombres">
+				<input placeholder="Nombres" type="text" name="nombres">
 			</div>
 			<div>
 				<label>Apellidos : </label>
-				<input type="text" name="apellidos">
+				<input placeholder="Apellidos" type="text" name="apellidos">
 			</div>
 			<div>
 				<label>Departamentos : </label>
-				<input type="text" name="departamentos">
+				<input placeholder="Departamentos" type="text" name="departamentos">
 			</div>
 			<div>
 				<label>Dirección : </label>
-				<input type="text" name="dirección">
+				<input placeholder="Dirección" type="text" name="dirección">
 			</div>
 			<div>
 				<label>Correo_Electrónico : </label>
-				<input type="text" name="correo_electrónico">
+				<input placeholder="Correo Electrónico" type="text" name="correo_electrónico">
 			</div>
 			<div>
 				<label>Teléfono : </label>
-				<input type="number" name="teléfono">
+				<input placeholder="Teléfono" type="number" name="teléfono">
 			</div>
 			<div>
 				<label>Fecha_Hora_Creada : </label>
@@ -68,10 +69,11 @@
 				<input type="date" name="fechaM">
 			</div>
 			<div>
-				<input type="submit" value="Enviar">
+				<input class="btn btn-dark" type="submit" value="Enviar">
 			</div>
 		</form>
 	</div>
+	<br>
 	<%! List<Empleados> listaEmpleados; %>
 	<%
 	 try{
@@ -79,7 +81,7 @@
 		 Iterator<Empleados> item = listaEmpleados.iterator();
 	%>
 	<table class="table">
-		<thead class="table table-dark table-striped">
+		<thead class="table table-striped">
 			<th>ID</th>
 			<th>Tipo_documento</th>
 			<th>Numero_documento</th>
@@ -89,7 +91,6 @@
 			<th>Dirección</th>
 			<th>Correo_electrónico</th>
 			<th>Teléfono</th>
-			<th>Apellido</th>
 			<th>FechaC</th>
 			<th>FechaM</th>
 		</thead>
@@ -97,7 +98,7 @@
 		<%	while(item.hasNext()){
 			Empleados empleados=item.next();
 			%>
-			<tr>
+			<tr class="col1">
 				<td><%= empleados.getId() %></td>
 				<td><%= empleados.getTipo_documento() %></td>
 				<td><%= empleados.getNumero_documento() %></td>
@@ -109,7 +110,8 @@
 				<td><%= empleados.getTeléfono() %></td>
 				<td><%= empleados.getFechaC() %></td>
 				<td><%= empleados.getFechaM() %></td>
-				<td><a href="#">Editar</a></td>
+				<td><a class="btn btn-primary" href="#">Editar</a></td>
+				<td><a class="btn btn-danger" href="#">Eliminar</a></td>
 			</tr>
 			<% }
 		}catch(Exception e){}

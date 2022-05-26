@@ -15,17 +15,59 @@
 	
 	<div class="container2">
 		<form action="ServletDepartamentoController" method="get">
+			<br>
 			<div>
 				<label>ID : </label>
-				<input type="text" name="id">
+				<input placeholder="ID" type="text" name="id">
 			</div>
 			<div>
-				<label>Codigo_Departamento : </label>
-				<input type="text" name="codigo_departamento">
+				  <label for="codigo_departamento">Codigo_departamento : </label>
+				  <select placeholder="ID" class="form-select" id="codigo_departamento" name="codigo_departamento">
+				  <option selected>Codigo</option>
+				  <option selected> 1 </option>
+				  <option selected> 2 </option>
+				  </select>
 			</div>
 			<div>
-				<label>Nombre_Departamento : </label>
-				<input type="text" name="nombre_departamento">
+				<label for="nombre_departamento">Tipo_Documento: </label>
+				<select class="form-select" id="nombre_departamento" name="nombre_departamento">
+				  <option selected>Antioquia</option>
+				  <option selected>Atlántico</option>
+				  <option selected>Barranquilla D.E</option>
+				  <option selected>Santa Fe de Bogotá D.C.</option>
+				  <option selected>Bolívar</option>
+				  <option selected>Cartagena D.E.</option>
+				  <option selected>Boyaca</option>
+				  <option selected>Caldas</option>
+				  <option selected>Caquetá</option>
+				  <option selected>Cauca</option>
+				  <option selected>Cesar</option>
+				  <option selected>Córdova</option>
+				  <option selected>Cundinamarca</option>
+				  <option selected>Chocó</option>
+				  <option selected>Huila</option>
+				  <option selected>La Guajira</option>
+				  <option selected>Magdalena</option>
+				  <option selected>Santamarta D.E</option>
+				  <option selected>Meta</option>
+				  <option selected>Nariño</option>
+				  <option selected>Norte de Santander</option>
+				  <option selected>Quindio</option>
+				  <option selected>Risaralda</option>
+				  <option selected>Santander</option>
+				  <option selected>Sucre</option>
+				  <option selected>Tolima</option>
+				  <option selected>Valle</option>
+				  <option selected>Arauca</option>
+				  <option selected>Casanare</option>
+				  <option selected>Putumayo</option>
+				  <option selected>San Andrés</option>
+				  <option selected>Amazonas</option>
+				  <option selected>Guainía</option>
+				  <option selected>Guaviare</option>
+				  <option selected>Vaupés</option>
+				  <option selected>Vichada</option>
+				</select>
 			</div>
 			<div>
 				<label>Fecha_Hora_Creada : </label>
@@ -36,10 +78,11 @@
 				<input type="date" name="fechaM">
 			</div>
 			<div>
-				<input type="submit" value="Enviar">
+				<input class="btn btn-dark" type="submit" value="Enviar">
 			</div>
 		</form>
 	</div>
+	<br>
 	<%! List<Departamentos> listaDepartamentos; %>
 	<%
 	 try{
@@ -47,7 +90,7 @@
 		 Iterator<Departamentos> item = listaDepartamentos.iterator();
 	%>
 	<table class="table">
-		<thead class="table table-dark table-striped">
+		<thead class="table table-striped">
 			<th>ID</th>
 			<th>Codigo_Departamento</th>
 			<th>Nombre_Departamento</th>
@@ -64,7 +107,10 @@
 				<td><%= departamentos.getNombre_departamento() %></td>
 				<td><%= departamentos.getFechaC() %></td>
 				<td><%= departamentos.getFechaM() %></td>
+				<td><a class="btn btn-info" href="#">Editar</a></td>
+				<td><a class="btn btn-danger" href="#">Eliminar</a></td>
 			</tr>
+			
 			<% }
 		}catch(Exception e){}
 			%>
