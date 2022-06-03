@@ -5,8 +5,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
+	
+	final String JDBC_DRIVER = "com.myqsl.cj.jdbc.Driver";
+	final String DB_URL = "jdbs:mysql://localhost/BD_Admin_Emple"
+		
+	}
+	
 
-	private String db="BD_Admin_Emple";
+	/*private String db="BD_Admin_Emple";
 	private Connection cnx=null;
 	private String usuario="root";
 	private String password="Forever16";
@@ -29,5 +35,5 @@ public class Conexion {
 		Class.forName("com.myqsl.cj.jdbc.Driver");
 		cnx=DriverManager.getConnection(url,usuario,password);
 		return cnx;
-	}
+	}*/
 }
