@@ -13,7 +13,7 @@
 	<h1>Lista</h1>
 	<div>
 		<ul>
-			<li><a class="btn btn-success" href="DepartamentoServletController">Departamento</a></li>
+			<li><a class="btn btn-success" href="./DepartamentoServletController">Departamento</a></li>
 			<br>
 			<li><a class="btn btn-success" href="">Ciudad</a></li>
 		</ul>

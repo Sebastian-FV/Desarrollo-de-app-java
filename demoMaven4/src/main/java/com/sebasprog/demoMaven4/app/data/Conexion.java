@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-	private String db="AdminEmple";
+	private String db="BD_Admin_Emple";
 	private Connection cnx=null;
 	private String usuario="root";
 	private String password="Forever16";
-	private String url="jdbs:mysql://localhost:3306"+db;
+	private String url="jdbs:mysql://localhost:3306/BD_Admin_Emple"+db;
 	
 	public Conexion() {
 		
