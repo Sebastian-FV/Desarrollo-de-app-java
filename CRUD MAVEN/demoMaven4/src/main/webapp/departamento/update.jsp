@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page isELIgnored="false"%>
+     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+  <%@page isELIgnored="false" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +13,15 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
 	crossorigin="anonymous">
 </head>
+</head>
 <body>
 	<div class="container">
+		<h1><c:out value="${titulo } "></c:out></h1>
+		<div class="container">
 		<h1><c:out value="${titulo }"></c:out></h1>
 		<div>
 		<c:set var="dept" value="${departamento}"/>
-			<form action="/DepartamentoServletController?action=update" method="post">
+			<form action="../DepartamentoServletController?action=update" method="post">
 				<div class="form-group">
 					<label>id</label>
 					<input class="form-control" type="text" readonly="readonly" name="id" disabled="disabled" value="<c:out value="${dept.id}" />"/>
@@ -43,6 +46,8 @@
 				<div>
 					<input type="submit" value="guardar" class="btn btn-primary"/>
 				</div>
+			</form>
+		</div>
 			</form>
 		</div>
 	</div>

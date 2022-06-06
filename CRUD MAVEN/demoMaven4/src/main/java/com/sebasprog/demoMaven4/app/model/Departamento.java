@@ -1,5 +1,6 @@
 package com.sebasprog.demoMaven4.app.model;
 
+import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
 
@@ -82,11 +83,9 @@ public class Departamento {
 				+ fecha_hora_modifica + ", fk_Ciudades_id=" + fk_Ciudades_id + "]";
 	}
 
-	public void setId(long long1) {
+	public static void setId(long long1) {
 		// TODO Auto-generated method stub
-		
 	}
-
 	public void setFecha_hora_modifica(java.util.Date date) {
 		// TODO Auto-generated method stub
 		
@@ -96,7 +95,6 @@ public class Departamento {
 		// TODO Auto-generated method stub
 		
 	}
-
-
 	
 }
+		

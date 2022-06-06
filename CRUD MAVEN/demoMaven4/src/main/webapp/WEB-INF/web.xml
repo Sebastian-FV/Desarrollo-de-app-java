@@ -5,13 +5,13 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>CiudadServletController</servlet-name>
-  	<display-name>CiudadServletController</display-name>
+  	<servlet-name>DepartamentoServletController</servlet-name>
+  	<display-name>DepartamentoServletController</display-name>
   	<description></description>
-  	<servlet-class>com.luiguiprog.demoMaven4.app.controller.CiudadServletController</servlet-class>
+  	<servlet-class>com.sebasprog.demoMaven4.app.controller.DepartamentoServletController</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>CiudadServletController</servlet-name>
-  	<url-pattern>/CiudadServletController</url-pattern>
+  	<servlet-name>DepartamentoServletController</servlet-name>
+  	<url-pattern>/DepartamentoServletController</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -13,4 +13,3 @@ public interface IDepartamento {
 	public void eliminarDepartamento(Departamento departamento);
 
 }
-
