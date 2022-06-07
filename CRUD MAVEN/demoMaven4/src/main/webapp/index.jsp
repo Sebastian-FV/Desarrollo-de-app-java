@@ -10,11 +10,10 @@
 
 </head>
 <body>
-	<h1>Lista de departamentos</h1>
 	<div>
 		<ul>
-			<li><a class="btn btn-dark" href="DepartamentoServletController">Departamento</a></li>
-			<li><a class="btn btn-dark" href="">Ciudad</a></li>
+			<h1>Lincks</h1>
+			<li><a class="btn btn-primary" href="DepartamentoServletController">Departamento</a> <a class="btn btn-success" href="">Ciudad</a></li>
 		</ul>
 	</div>
 </body>
