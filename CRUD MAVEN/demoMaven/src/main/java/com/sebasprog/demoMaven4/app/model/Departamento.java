@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Departamento {
 
-    private String id;
+	private String id;
 	private String codigo_departamento;
 	private String nombre_departamento;
 	private Date fecha_hora_crea;
 	private Date fecha_hora_modifica;
 	private List<Ciudad> fk_Ciudades_id;
-	
-    public Departamento() {
-    }
+
+	public Departamento() {
+	}
 
 	public Departamento(String id, String codigo_departamento, String nombre_departamento, Date fecha_hora_crea,
 			Date fecha_hora_modifica, List<Ciudad> fk_Ciudades_id) {
@@ -76,7 +76,7 @@ public class Departamento {
 
 	public void setId(long long1) {
 		// TODO Auto-generated method stub
-		
+
 	}
-    
+
 }

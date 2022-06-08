@@ -6,9 +6,9 @@ public class Ciudad {
 	private String nombre_ciudad;
 	private String codigo_ciudad;
 	private long fk_departamento;
-	
+
 	public Ciudad() {
-		
+
 	}
 
 	public Ciudad(String id, String nombre_ciudad, String codigo_ciudad, long fk_departamento) {
@@ -50,5 +50,5 @@ public class Ciudad {
 	public void setFk_departamento(long fk_departamento) {
 		this.fk_departamento = fk_departamento;
 	}
-	
+
 }

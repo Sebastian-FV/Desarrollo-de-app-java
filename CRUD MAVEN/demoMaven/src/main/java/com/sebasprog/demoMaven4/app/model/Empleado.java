@@ -123,5 +123,5 @@ public class Empleado {
 	public void setFecha_hora_modifica(Date fecha_hora_modifica) {
 		this.fecha_hora_modifica = fecha_hora_modifica;
 	}
-	
+
 }
