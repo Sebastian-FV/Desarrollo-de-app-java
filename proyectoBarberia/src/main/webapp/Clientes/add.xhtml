@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal">
+                <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <h2 style="text-align: center">Crear personas</h2>
+                </div>
+            </div>
+            <hr/>
+                <div class="form-group">
+                <h:outputLabel for="nombreUsuario" class="control-label col-sm-4">Nombre</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="nombreUsuario" value="#{usuarioBean.usuario.nombreUsuario}" class="form-control"
+                                validatorMessage="Persona name is requierd">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+                <div class="form-group">
+                <h:outputLabel for="apellidoUsuario" class="control-label col-sm-4">Apellido</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="apellidoUsuario" value="#{usuarioBean.usuario.apellidoUruario}" class="form-control"
+                                validatorMessage="Apellido is requierd">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+                <div class="form-group">
+                <h:outputLabel for="identificacionUsuario" class="control-label col-sm-4">Documento</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="identificacionUsuario" value="#{usuarioBean.usuario.identificacionUsuario}" class="form-control"
+                                validatorMessage="Documento is requierd">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+                <div class="form-group">
+                <h:outputLabel for="contraseñaUsuario" class="control-label col-sm-4">Contraseña</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="contraseñaUsuario" value="#{usuarioBean.usuario.contraseñaUsuario}" class="form-control"
+                                validatorMessage="Contraseña is requierd">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+                <div class="form-group">
+                <h:outputLabel for="telefonoUsuario" class="control-label col-sm-4">Telefono</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="telefonoUsuario" value="#{usuarioBean.usuario.telefonoUsuario}" class="form-control"
+                                 validatorMessage="Telefono is requierd">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="correoUsuario" class="control-label col-sm-4">Correo</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="correoUsuario" value="#{usuarioBean.usuario.correoUsuario}" class="form-control"
+                                 validatorMessage="Correo is requierd">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="nacimientoUsuario" class="control-label col-sm-4">Fecha Nacimiento</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="nacimientoUsuario" value="#{usuarioBean.usuario.usuarioUsuario}" class="form-control"
+                                 validatorMessage="Fecha Nacimiento is requierd">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="idRolFk" class="control-label col-sm-4">Rol</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:selectOneMenu value="#{usuarioBean.llenarRoles()}">
+                        <f:selectItem itemValue="" itemLabel="" noSelectionOption="true" />
+                        <f:selectItems value="#{usuarioBean.listaRoles.iterator.hasNext}" />
+                    </h:selectOneMenu>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="col-sm-2">
+                        <h:commandButton value="Save" action="${usuarioBean.save()}" class="btn btn-success"
+                                         style="width: 80px;"></h:commandButton>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-2">
+                        <h:link outcome="index" value="Vies Users Record List" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>    
+        </h:form>
+    </h:body>
+</html>
+
